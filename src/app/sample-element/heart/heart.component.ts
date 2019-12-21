@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class HeartComponent {
   @Input()
   public width: number = 20;
+
 }

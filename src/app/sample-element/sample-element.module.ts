@@ -4,27 +4,29 @@ import { createCustomElement } from '@angular/elements';
 
 import { HeartModule } from './heart/heart.module';
 import { HeartComponent } from './heart/heart.component';
-import { MadeWithLoveComponent } from './made-with-love.component';
+import { SampleElementComponent } from './sample-element.component';
+import { LogoutModule } from './logout/logout.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    HeartModule
+    HeartModule,
+    LogoutModule
   ],
   declarations: [
-    MadeWithLoveComponent
+    SampleElementComponent
   ],
   entryComponents: [
-    MadeWithLoveComponent
+    SampleElementComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ]
 })
-export class MadeWithLoveModule {
+export class SampleElementModule {
   constructor(private injector: Injector) {
-    const madeWithLoveElement = createCustomElement(MadeWithLoveComponent, { injector });
+    const sampleElement = createCustomElement(SampleElementComponent, { injector });
 
-    customElements.define('made-with-love', madeWithLoveElement);
+    customElements.define('sample-element', sampleElement);
   }
 }

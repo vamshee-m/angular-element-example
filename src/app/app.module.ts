@@ -1,22 +1,15 @@
+import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { LogoutModule } from './logout-module/logout.module';
-import { MadeWithLoveModule } from './made-with-love/made-with-love.module';
-
+import { SampleElementModule } from './sample-element/sample-element.module';
 
 @NgModule({
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    LogoutModule,
-    MadeWithLoveModule
+    SampleElementModule
   ]
 })
 export class AppModule {
-    ngDoBootstrap() { }
+  ngDoBootstrap() { }
 }

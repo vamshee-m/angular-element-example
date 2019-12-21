@@ -1,22 +1,23 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'made-with-love',
+  selector: 'sample-element',
   template: `
     <ng-template #noUrl>
       {{ name }}
     </ng-template>
 
     <span [style.font-size.em]="size">
-      Made with <sample-heart></sample-heart> by 
+      App created to demonstrate
       <ng-container *ngIf="url && url.length > 0; else noUrl">
         <a [attr.href]="url" target="_blank">{{ name }}</a>
       </ng-container>
+      <sample-heart></sample-heart>
     </span>
   `,
-  styleUrls: ['./made-with-love.component.scss']
+  styleUrls: ['./sample-element.component.css']
 })
-export class MadeWithLoveComponent implements OnInit {
+export class SampleElementComponent implements OnInit {
   @Input()
   public name: string;
 

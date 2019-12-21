@@ -1,6 +1,5 @@
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-
 import { HeartComponent } from './heart.component';
 
 @NgModule({
