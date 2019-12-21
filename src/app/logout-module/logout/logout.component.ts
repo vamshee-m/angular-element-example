@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { ModalComponent } from './modal/modal.component';
+
+import { ModalComponent } from '../../modal/modal.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-logout',
+  templateUrl: './logout.component.html',
+  styleUrls: ['./logout.component.css']
 })
+export class LogoutComponent implements OnInit {
 
-export class AppComponent {
-  constructor(public matDialog: MatDialog) { }
+    constructor(public matDialog: MatDialog) { }
+      
+  ngOnInit() {
+  }
 
-  openModal() {
+   openModal() {
     const dialogConfig = new MatDialogConfig();
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = true;
